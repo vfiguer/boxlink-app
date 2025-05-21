@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/tailwind/output.css" rel="stylesheet" />
+    <title>Iniciar Sesión - BoxLink</title>
+  </head>
+  <body class="bg-background flex flex-col min-h-screen">
+    <!-- HEADER -->
+    <header class="bg-primary w-full h-20 flex items-center px-4">
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <a href="/" class="flex items-center gap-2">
+          <img src="../assets/img/logo/logo.png" alt="Logo" class="h-10" />
+          <span class="text-white text-lg font-semibold">BoxLink</span>
+        </a>
+      </div>
+
+      <div class="flex-1 flex justify-center items-center gap-6">
+        <nav class="flex gap-4">
+          <a href="#" class="text-white hover:underline text-xl">Inicio</a>
+          <a href="#" class="text-white hover:underline text-xl">¿Cómo funciona?</a>
+          <a href="#" class="text-white hover:underline text-xl">Compra externa</a>
+        </nav>
+        <div class="relative group">
+          <button class="text-white text-xl py-2 hover:underline">
+            Tiendas Afiliadas
+          </button>
+          <div class="absolute hidden group-hover:block bg-white text-black top-full left-0 rounded shadow-md z-10 min-w-[150px]">
+            <a href="#" class="block px-4 py-2 hover:bg-text">Opción 1</a>
+            <a href="#" class="block px-4 py-2 hover:bg-text">Opción 2</a>
+            <a href="#" class="block px-4 py-2 hover:bg-text">Opción 3</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 flex gap-4">
+        <a href="/perfil">
+          <img src="../assets/img/icons/cart.png" alt="carrito" class="h-6 w-6" />
+        </a>
+        <a href="/notificaciones">
+          <img src="../assets/img/icons/notifications.png" alt="notificaciones" class="h-6 w-6" />
+        </a>
+        <a href="/perfil">
+          <img src="../assets/img/icons/user.png" alt="usuario" class="h-6 w-6" />
+        </a>
+      </div>
+    </header>
+
+    <!-- MAIN - FORMULARIO DE LOGIN -->
+    <main class="flex-grow flex items-center justify-center p-6">
+      <div class="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center mb-6">Iniciar Sesión</h2>
+        <form action="/login" method="POST" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-text">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-text">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="mt-1 w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary text-white py-2 rounded-md hover:bg-primary/90 transition"
+          >
+            Entrar
+          </button>
+        </form>
+        <p class="text-center text-sm text-text mt-4">
+          ¿No tienes cuenta?
+          <a href="/registro" class="text-primary hover:underline">Crea una cuenta</a>
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-4">
+      <p>&copy; 2025 BoxLink. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -7,7 +7,6 @@
     <title>BoxLink - Home</title>
   </head>
   <body class="bg-background text-white">
-
     <!-- Header -->
     <header class="bg-primary w-full h-20 flex items-center px-4">
       <div class="flex-shrink-0 flex items-center gap-2">
@@ -20,12 +19,20 @@
       <div class="flex-1 flex justify-center items-center gap-6">
         <nav class="flex gap-4">
           <a href="#" class="text-white hover:underline text-xl">Inicio</a>
-          <a href="#funciona" class="text-white hover:underline text-xl">¿Cómo funciona?</a>
-          <a href="#externa" class="text-white hover:underline text-xl">Compra externa</a>
+          <a href="#funciona" class="text-white hover:underline text-xl"
+            >¿Cómo funciona?</a
+          >
+          <a href="#externa" class="text-white hover:underline text-xl"
+            >Compra externa</a
+          >
         </nav>
         <div class="relative group">
-          <button class="text-white text-xl py-2 hover:underline">Tiendas Afiliadas</button>
-          <div class="absolute hidden group-hover:block bg-white text-black top-full left-0 rounded shadow-md z-10 min-w-[150px]">
+          <button class="text-white text-xl py-2 hover:underline">
+            Tiendas Afiliadas
+          </button>
+          <div
+            class="absolute hidden group-hover:block bg-white text-black top-full left-0 rounded shadow-md z-10 min-w-[150px]"
+          >
             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Opción 1</a>
             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Opción 2</a>
             <a href="#" class="block px-4 py-2 hover:bg-gray-100">Opción 3</a>
@@ -34,45 +41,86 @@
       </div>
 
       <div class="flex-shrink-0 flex gap-4">
-        <a href="/perfil"><img src="./assets/img/icons/cart.png" alt="carrito" class="h-6 w-6" /></a>
-        <a href="/notificaciones"><img src="./assets/img/icons/notifications.png" alt="notificaciones" class="h-6 w-6" /></a>
-        <a href="/perfil"><img src="./assets/img/icons/user.png" alt="usuario" class="h-6 w-6" /></a>
+        <a href="/perfil"
+          ><img src="./assets/img/icons/cart.png" alt="carrito" class="h-6 w-6"
+        /></a>
+        <a href="/notificaciones"
+          ><img
+            src="./assets/img/icons/notifications.png"
+            alt="notificaciones"
+            class="h-6 w-6"
+        /></a>
+        <a href="/perfil"
+          ><img src="./assets/img/icons/user.png" alt="usuario" class="h-6 w-6"
+        /></a>
       </div>
     </header>
 
     <!-- Hero -->
     <section class="bg-primary text-center py-20 px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">Agrupa tus pedidos y ahorra en envíos</h1>
-      <p class="text-xl md:text-2xl mb-8">Conecta con otros compradores de las islas y reduce gastos agrupando tus compras peninsulares.</p>
-      <a href="/registro" class="bg-white text-primary font-semibold px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition">
-        Empezar ahora
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Ahorra en tus pedidos combinando.
+      </h1>
+      <p class="text-xl md:text-2xl mb-8">
+        Con nuestro sistema podras comprar de las tiendas de siempre y ahorrando
+      </p>
+      <a
+        href="/registro"
+        class="bg-white text-primary font-semibold px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition"
+      >
+        Crear cuenta
       </a>
     </section>
 
     <!-- Cómo funciona -->
-    <section id="funciona" class="py-16 px-6 max-w-6xl mx-auto text-center text-gray-100">
-      <h2 class="text-3xl font-bold mb-10">¿Cómo funciona?</h2>
+    <section
+      id="funciona"
+      class="py-16 px-6 max-w-6xl mx-auto text-center text-gray-100"
+    >
+      <h2 class="text-3xl font-bold mb-10 text-text">¿Cómo funciona?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-primary/80 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">1. Únete o crea un box</h3>
-          <p>Agrúpate con otros usuarios interesados en comprar en tiendas peninsulares.</p>
+          <h3 class="text-xl font-semibold mb-2">
+            1. Compra en tiendas online
+          </h3>
+          <p>
+            Realiza tus pedidos como siempre, indicando la dirección de
+            agrupación proporcionada.
+          </p>
         </div>
         <div class="bg-primary/80 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">2. Compra en tiendas online</h3>
-          <p>Realiza tus pedidos como siempre, indicando la dirección de agrupación proporcionada.</p>
+          <h3 class="text-xl font-semibold mb-2">2. Recibe tu envío</h3>
+          <p>
+            Realiza tus pedidos como siempre, indicando la dirección de
+            agrupación proporcionada.
+          </p>
         </div>
         <div class="bg-primary/80 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">3. Recibe tu envío en las islas</h3>
-          <p>Una vez agrupados los paquetes, los recibirás todos juntos con un coste de envío compartido.</p>
+          <h3 class="text-xl font-semibold mb-2">
+            3. Ahorra y ayuda al planeta
+          </h3>
+          <p>
+            Al hacer menos trayecto al solo enviar un paquete, no solo reduces
+            la cantidad que tus pedidos contaminan, sino su coste
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Compra externa -->
-    <section id="externa" class="py-16 px-6 bg-secondary text-center text-gray-100">
+    <section
+      id="externa"
+      class="py-16 px-6 bg-secondary text-center text-gray-100"
+    >
       <h2 class="text-3xl font-bold mb-6">Compra externa fácil y económica</h2>
-      <p class="text-lg mb-6 max-w-3xl mx-auto">Gracias a nuestra plataforma, ya no tendrás que preocuparte por los altos costes de envío a Canarias. Compra como si vivieras en la península y aprovecha la comunidad para ahorrar.</p>
-      <a href="/registro" class="bg-white text-primary font-semibold px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition">
+      <p class="text-lg mb-6 max-w-3xl mx-auto">
+        Gracias a nuestra plataforma, ya no tendrás que preocuparte por los
+        altos costes de envío. Compra como si vivieras en la península
+      </p>
+      <a
+        href="/registro"
+        class="bg-white text-primary font-semibold px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition"
+      >
         Regístrate gratis
       </a>
     </section>
@@ -86,6 +134,5 @@
         <a href="#" class="hover:underline">Contacto</a>
       </div>
     </footer>
-
   </body>
 </html>
