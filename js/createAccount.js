@@ -2,7 +2,7 @@ import { addUser, createUserDatabase } from './accounts.js';
 
 // Redirigir al index si ya hay un usuario logueado
 if (localStorage.getItem("loggedInUser")) {
-  window.location.href = "./index.html";
+  window.location.href = "/boxlink-app/index.html";
 }
 
 // Crear base de datos si no existe
@@ -44,6 +44,7 @@ $("#register").on("submit", (event) => {
     alert("El correo ya está registrado.");
   } else {
     alert("Cuenta creada con éxito.");
-    window.location.href = "./profile.html";
+    window.location.href = "/boxlink-app/docs/profile.html";
   }
 });
+//https://vfiguer.github.io/boxlink-app/docs/profile.html

@@ -97,7 +97,7 @@ $(document).ready(function () {
   });
 
   $("#buy").on("click", function () {
-      window.location.href = "./orderConfirm.html";
+      window.location.href = "/boxlink-app/docs/orderConfirm.html";
   });
 
 });

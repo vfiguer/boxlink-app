@@ -45,7 +45,7 @@ $(document).ready(function () {
     addOrder(userId, cart);
     clearCart();
     alert("Pedido confirmado");
-window.location.href = "./profile.html";
+window.location.href = "/boxlink-app/docs/profile.html";
 
   });
 });

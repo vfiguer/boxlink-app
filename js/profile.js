@@ -11,7 +11,7 @@ if (user) {
   document.getElementById("email").textContent = user.email;
 } else {
   alert("No has iniciado sesión.");
-  window.location.href = "./login.html";
+  window.location.href = "/boxlink-app/docs/login.html";
 }
 
 createShipmentsDatabase();
@@ -169,5 +169,5 @@ if (shipments.length > 0) {
 const logoutBtn = document.getElementById("logout");
 logoutBtn?.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "./login.html";
+  window.location.href = "/boxlink-app/docs//login.html";
 });

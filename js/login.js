@@ -25,7 +25,7 @@ $(document).ready(() => {
       alert("Correo o contraseña incorrectos.");
     } else {
       alert("Inicio de sesión exitoso.");
-      window.location.href = "./profile.html";
+      window.location.href = "/boxlink-app/docs//profile.html";
     }
   });
 });
