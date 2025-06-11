@@ -18,6 +18,7 @@ createShipmentsDatabase();
 
 const orders = getOrdersByUserId(userId);
 const ordersSection = document.getElementById("orders-section");
+const allShipments = getShipmentsByUserId(userId);
 
 if (orders && orders.length > 0) {
   const title = document.createElement("h3");
@@ -31,7 +32,17 @@ if (orders && orders.length > 0) {
   const shipmentForm = document.createElement("form");
   shipmentForm.id = "shipment-form";
 
+  // Crear un conjunto de identificadores únicos para productos ya enviados
+  const sentProductKeys = new Set();
+  allShipments.forEach(shipment => {
+    shipment.items.forEach(item => {
+      sentProductKeys.add(`${item.storeId}|${item.productId}|${item.orderIndex}`);
+    });
+  });
+
   orders.forEach((order, index) => {
+    let allItemsSent = true;
+
     const card = document.createElement("div");
     card.className = "bg-white border border-gray-200 rounded-xl shadow p-6";
 
@@ -40,21 +51,11 @@ if (orders && orders.length > 0) {
     header.textContent = `Pedido #${index + 1}`;
     card.appendChild(header);
 
-    const shipments = getShipmentsByUserId(userId);
-
-// Crear un conjunto de identificadores únicos para productos ya enviados
-const sentProductKeys = new Set();
-shipments.forEach(shipment => {
-  shipment.items.forEach(item => {
-    sentProductKeys.add(`${item.storeId}|${item.productId}|${item.orderIndex}`);
-  });
-});
-
-    order.items.forEach((item, itemIndex) => {
+    order.items.forEach((item) => {
       const key = `${item.storeId}|${item.productId}|${index}`;
-      if (sentProductKeys.has(key)) return; // Este producto ya fue enviado
+      if (sentProductKeys.has(key)) return;
 
- 
+      allItemsSent = false;
       const product = getProductById(item.storeId, item.productId);
       if (product) {
         const itemDiv = document.createElement("div");
@@ -86,18 +87,22 @@ shipments.forEach(shipment => {
       }
     });
 
-    ordersContainer.appendChild(card);
+    if (!allItemsSent) {
+      ordersContainer.appendChild(card);
+    }
   });
 
-  shipmentForm.appendChild(ordersContainer);
+  if (ordersContainer.children.length > 0) {
+    shipmentForm.appendChild(ordersContainer);
 
-  const submitBtn = document.createElement("button");
-  submitBtn.type = "submit";
-  submitBtn.textContent = "Procesar Envío";
-  submitBtn.className = "mt-6 bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition";
-  shipmentForm.appendChild(submitBtn);
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "submit";
+    submitBtn.textContent = "Procesar Envío";
+    submitBtn.className = "mt-6 bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition";
+    shipmentForm.appendChild(submitBtn);
 
-  ordersSection.appendChild(shipmentForm);
+    ordersSection.appendChild(shipmentForm);
+  }
 }
 
 // Procesar envío
@@ -118,8 +123,7 @@ if (form) {
 }
 
 // Mostrar envíos
-const shipments = getShipmentsByUserId(userId);
-if (shipments.length > 0) {
+if (allShipments.length > 0) {
   const shipmentsSection = document.createElement("section");
   shipmentsSection.className = "mt-12 max-w-4xl mx-auto";
 
@@ -128,7 +132,7 @@ if (shipments.length > 0) {
   title.textContent = "Envíos Realizados";
   shipmentsSection.appendChild(title);
 
-  shipments.forEach((shipment, i) => {
+  allShipments.forEach((shipment, i) => {
     const card = document.createElement("div");
     card.className = "bg-white border border-gray-200 rounded-xl shadow p-6 mb-6";
 
@@ -169,5 +173,5 @@ if (shipments.length > 0) {
 const logoutBtn = document.getElementById("logout");
 logoutBtn?.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
-  window.location.href = "/boxlink-app/docs//login.html";
+  window.location.href = "/boxlink-app/docs/login.html";
 });

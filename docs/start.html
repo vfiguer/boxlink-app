@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/tailwind/output.css" rel="stylesheet" />
-    <title>Perfil - BoxLink</title>
+    <title>Inicio - BoxLink</title>
   </head>
   <body class="bg-background flex flex-col min-h-screen">
-     <!-- Header -->
+  <!-- Header -->
     <header class="bg-primary w-full h-20 flex items-center px-4">
       <div class="flex-shrink-0 flex items-center gap-2">
         <a href="../index.html" class="flex items-center gap-2">
@@ -58,43 +58,12 @@
       </div>
     </header>
 
-    <!-- MAIN - PERFIL -->
-    <main class="flex-grow p-6">
-      <div
-        class="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-8"
-        id="profile-card"
-      >
-        <h2 class="text-2xl font-bold text-center mb-6">Mi Perfil</h2>
-        <div class="space-y-4" id="profile-info">
-          <div>
-            <label class="block text-sm font-medium text-text">Nombre</label>
-            <p class="bg-gray-100 px-4 py-2 rounded-md text-text" id="nombre">
-              Cargando...
-            </p>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-text"
-              >Correo Electrónico</label
-            >
-            <p class="bg-gray-100 px-4 py-2 rounded-md text-text" id="email">
-              Cargando...
-            </p>
-          </div>
-        </div>
-        <div class="mt-6">
-          <button
-            id="logout"
-            class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition"
-          >
-            Cerrar Sesión
-          </button>
-        </div>
+    <!-- MAIN - PRODUCTOS DESTACADOS -->
+    <main class="flex-grow p-6 max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8 text-center">Productos Destacados</h1>
+      <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Productos se cargarán aquí -->
       </div>
-
-      <!-- Sección de pedidos del usuario -->
-      <section class="mt-12 max-w-4xl mx-auto" id="orders-section">
-        <!-- Se inyecta con JS -->
-      </section>
     </main>
 
     <!-- FOOTER -->
@@ -102,6 +71,6 @@
       <p>&copy; 2025 BoxLink. Todos los derechos reservados.</p>
     </footer>
 
-    <script type="module" src="../js/profile.js"></script>
+    <script type="module" src="../js/start.js"></script>
   </body>
 </html>

@@ -44,7 +44,7 @@ $("#register").on("submit", (event) => {
     alert("El correo ya está registrado.");
   } else {
     alert("Cuenta creada con éxito.");
-    window.location.href = "/boxlink-app/docs/profile.html";
+    window.location.href = "/boxlink-app/docs/start.html";
   }
 });
 //https://vfiguer.github.io/boxlink-app/docs/profile.html
