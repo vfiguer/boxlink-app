@@ -45,7 +45,7 @@ $(document).ready(function () {
     addOrder(userId, cart);
     clearCart();
     alert("Pedido confirmado");
-window.location.href = "/docs/profile.html";
+window.location.href = "./profile.html";
 
   });
 });

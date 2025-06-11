@@ -2,7 +2,7 @@ import { addUser, createUserDatabase } from './accounts.js';
 
 // Redirigir al index si ya hay un usuario logueado
 if (localStorage.getItem("loggedInUser")) {
-  window.location.href = "/";
+  window.location.href = "./index.html";
 }
 
 // Crear base de datos si no existe
@@ -44,6 +44,6 @@ $("#register").on("submit", (event) => {
     alert("El correo ya está registrado.");
   } else {
     alert("Cuenta creada con éxito.");
-    window.location.href = "/docs/profile.html";
+    window.location.href = "./profile.html";
   }
 });

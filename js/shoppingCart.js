@@ -97,7 +97,7 @@ $(document).ready(function () {
   });
 
   $("#buy").on("click", function () {
-      window.location.href = "/docs/orderConfirm.html";
+      window.location.href = "./orderConfirm.html";
   });
 
 });
