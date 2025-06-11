@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/tailwind/output.css" rel="stylesheet" />
+    <title>Perfil - BoxLink</title>
+  </head>
+  <body class="bg-background flex flex-col min-h-screen">
+        <!-- Header -->
+    <header class="bg-primary w-full h-20 flex items-center px-4">
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/assets/img/logo/logo.png" alt="Logo" class="h-10" />
+          <span class="text-white text-lg font-semibold">BoxLink</span>
+        </a>
+      </div>
+
+      <div class="flex-1 flex justify-center items-center gap-6">
+        <nav class="flex gap-4">
+          <a href="/index.html" class="text-white hover:underline text-xl">Inicio</a>
+          <a href="#" class="text-white hover:underline text-xl"
+            >¿Cómo funciona?</a
+          >
+          <a href="#" class="text-white hover:underline text-xl"
+            >Compra externa</a
+          >
+        </nav>
+        <div class="relative group">
+          <button class="text-white text-xl py-2 hover:underline">
+            Tiendas Afiliadas
+          </button>
+          <div
+            class="absolute hidden group-hover:block bg-white text-black top-full left-0 rounded shadow-md z-10 min-w-[150px]"
+          >
+            <a href="/docs/store.html?store=store1" class="block px-4 py-2 hover:bg-gray-100">Tienda 1</a>
+            <a href="/docs/store.html?store=store2" class="block px-4 py-2 hover:bg-gray-100">Tienda 2</a>
+            <a href="/docs/store.html?store=store3" class="block px-4 py-2 hover:bg-gray-100">Tienda 3</a>
+            <a href="/docs/store.html?store=store4" class="block px-4 py-2 hover:bg-gray-100">Tienda 4</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 flex gap-4">
+        <a href="/docs/shoppingCart.html"
+          ><img src="/assets/img/icons/cart.png" alt="carrito" class="h-6 w-6"
+        /></a>
+        <a href="/docs/notifications.html"
+          ><img
+            src="/assets/img/icons/notifications.png"
+            alt="notificaciones"
+            class="h-6 w-6"
+        /></a>
+        <a href="/docs/profile.html"
+          ><img src="/assets/img/icons/user.png" alt="usuario" class="h-6 w-6"
+        /></a>
+      </div>
+    </header>
+
+    <!-- MAIN - PERFIL -->
+    <main class="flex-grow p-6">
+      <div
+        class="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-8"
+        id="profile-card"
+      >
+        <h2 class="text-2xl font-bold text-center mb-6">Mi Perfil</h2>
+        <div class="space-y-4" id="profile-info">
+          <div>
+            <label class="block text-sm font-medium text-text">Nombre</label>
+            <p class="bg-gray-100 px-4 py-2 rounded-md text-text" id="nombre">
+              Cargando...
+            </p>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-text"
+              >Correo Electrónico</label
+            >
+            <p class="bg-gray-100 px-4 py-2 rounded-md text-text" id="email">
+              Cargando...
+            </p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <button
+            id="logout"
+            class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition"
+          >
+            Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Sección de pedidos del usuario -->
+      <section class="mt-12 max-w-4xl mx-auto" id="orders-section">
+        <!-- Se inyecta con JS -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-4">
+      <p>&copy; 2025 BoxLink. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="/js/profile.js"></script>
+  </body>
+</html>
